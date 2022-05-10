@@ -1,0 +1,10 @@
+annotations:
+  application.giantswarm.io/team: "rocket"
+apiVersion: v2
+description: A Helm chart which defines the pre-installed apps in all Giant Swarm vSphere clusters
+home: https://github.com/giantswarm/default-apps-vsphere
+name: default-apps-vsphere
+restrictions:
+  compatibleProviders:
+    - vsphere
+version: 0.1.0
