@@ -7,4 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Initialise repo from template.
+- Add initial implementation without vSphere-specific apps.
+
 [Unreleased]: https://github.com/giantswarm/default-apps-vsphere/tree/main
