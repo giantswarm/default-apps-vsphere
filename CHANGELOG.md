@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1] - 2022-05-11
+
 ### Changed
 
 - Update templated labels to baseline standard.
@@ -18,5 +20,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initialise repo from template.
 - Add initial implementation without vSphere-specific apps.
 
-[Unreleased]: https://github.com/giantswarm/default-apps-vsphere/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/giantswarm/default-apps-vsphere/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/giantswarm/default-apps-vsphere/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/giantswarm/default-apps-vsphere/releases/tag/v0.1.0
