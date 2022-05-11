@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Update templated labels to baseline standard.
+
 ## [0.1.0] - 2022-05-11
 
 ### Added
