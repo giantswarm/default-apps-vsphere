@@ -44,7 +44,7 @@ apps:
       secret: true
     forceUpgrade: true
     namespace: kube-system
-    version: 1.1.0
+    version: 1.2.0
   clusterResources:
     appName: cluster-resources
     chartName: cluster-resources
