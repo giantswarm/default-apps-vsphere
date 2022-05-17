@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0] - 2022-05-17
+
 ### Added
 
 - Add `cloud-provider-vsphere-app`.
@@ -30,7 +32,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initialise repo from template.
 - Add initial implementation without vSphere-specific apps.
 
-[Unreleased]: https://github.com/giantswarm/default-apps-vsphere/compare/v0.1.2...HEAD
+[Unreleased]: https://github.com/giantswarm/default-apps-vsphere/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/giantswarm/default-apps-vsphere/compare/v0.1.2...v0.2.0
 [0.1.2]: https://github.com/giantswarm/default-apps-vsphere/compare/v0.1.1...v0.1.2
 [0.1.1]: https://github.com/giantswarm/default-apps-vsphere/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/giantswarm/default-apps-vsphere/releases/tag/v0.1.0
