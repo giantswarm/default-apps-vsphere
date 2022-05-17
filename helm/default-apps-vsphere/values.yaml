@@ -35,6 +35,16 @@ apps:
     forceUpgrade: false
     namespace: kube-system
     version: 0.1.0
+  cloudProviderVsphere:
+    appName: cloud-provider-vsphere
+    chartName: cloud-provider-vsphere
+    catalog: default
+    clusterValues:
+      configMap: true
+      secret: true
+    forceUpgrade: true
+    namespace: kube-system
+    version: 1.0.1
   clusterResources:
     appName: cluster-resources
     chartName: cluster-resources
