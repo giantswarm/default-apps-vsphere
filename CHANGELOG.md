@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Enable renovate to update app versions.
 
+### Added
+
+- Added `application.giantswarm.io/app-type: "bundle"` annotation
+
 ## [0.5.0] - 2022-05-17
 
 ### Changed
