@@ -277,7 +277,7 @@
                         }
                     }
                 },
-                "observability-bundle": {
+                "observabilityBundle": {
                     "type": "object",
                     "properties": {
                         "appName": {
@@ -299,6 +299,9 @@
                                     "type": "boolean"
                                 }
                             }
+                        },
+                        "forceUpgrade": {
+                            "type": "boolean"
                         },
                         "inCluster": {
                             "type": "boolean"

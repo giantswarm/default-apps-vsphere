@@ -7,15 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### Changed
-
-- Enable renovate to update app versions.
-
 ### Added
 
 - Added `application.giantswarm.io/app-type: "bundle"` annotation
 - Added `observability-bundle` as default app
 - Supports installing apps `inCluster`
+
+### Changed
+
+- Enable renovate to update app versions.
 
 ## [0.5.0] - 2022-05-17
 
