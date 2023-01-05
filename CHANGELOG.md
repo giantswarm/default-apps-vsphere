@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Bump node-exporter-app to v1.14.1
+
 ### Added
 
 - Added `application.giantswarm.io/app-type: "bundle"` annotation
