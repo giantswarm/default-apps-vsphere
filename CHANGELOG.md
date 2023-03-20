@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Remove `cilium` and `cloud-provider-vsphere` app since they will be part of cluster-vsphere from now on.
+- ⚠️ Breaking: Remove `cilium` and `cloud-provider-vsphere` app since they will be part of cluster-vsphere from now on.
 
 ## [0.7.0] - 2023-01-24
 
