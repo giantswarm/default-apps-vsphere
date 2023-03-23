@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- ⚠️ Breaking: Remove the deprecated `cluster-resources` app
+
 ## [0.8.0] - 2023-03-20
 
 ### Changed
