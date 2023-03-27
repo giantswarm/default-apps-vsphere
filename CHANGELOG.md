@@ -9,7 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- ⚠️ Breaking: Remove the deprecated `cluster-resources` app
+- ⚠️ Breaking: Remove the deprecated `cluster-resources` app.
+- Add `cert-manager`.
 
 ## [0.8.0] - 2023-03-20
 
