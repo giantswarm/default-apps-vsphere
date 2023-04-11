@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Bump `cert-manager-app` to `2.21.0`.
 - Bump `metrics-server-app` to `2.1.0`.
 - Bump `net-exporter` to `1.14.0`.
+- Enable configuration of Apps with the [extraConfig](https://github.com/giantswarm/rfc/tree/main/multi-layer-app-config#enhancing-app-cr) key.
 
 ## [0.8.0] - 2023-03-20
 
