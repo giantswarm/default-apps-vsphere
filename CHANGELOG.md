@@ -11,6 +11,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - ⚠️ Breaking: Remove the deprecated `cluster-resources` app.
 - Add `cert-manager`.
+- Bump `vertical-pod-autoscaler-app` to `3.4.1`.
+- Bump `vertical-pod-autoscaler-crd` to `2.0.1`.
+- Bump `cert-exporter` to `2.4.0`.
+- Bump `kube-state-metrics-app` to `1.15.0`.
+- Bump `cert-manager-app` to `2.21.0`.
+- Bump `metrics-server-app` to `2.1.0`.
+- Bump `net-exporter` to `1.14.0`.
 
 ## [0.8.0] - 2023-03-20
 
