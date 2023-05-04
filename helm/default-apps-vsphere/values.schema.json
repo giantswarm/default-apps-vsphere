@@ -2,6 +2,7 @@
     "$schema": "http://json-schema.org/schema#",
     "definitions": {
         "app": {
+            "additionalProperties": false,
             "type": "object",
             "properties": {
                 "appName": {
@@ -49,6 +50,7 @@
             }
         },
         "userConfig": {
+            "additionalProperties": false,
             "type": "object",
             "properties": {
                 "configMap": {
@@ -62,6 +64,7 @@
             }
         }
     },
+    "additionalProperties": false,
     "type": "object",
     "properties": {
         "apps": {
