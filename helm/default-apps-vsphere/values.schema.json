@@ -11,7 +11,7 @@
                 "catalog": {
                     "type": "string"
                 },
-                "borked___chartName": {
+                "chartName": {
                     "type": "string"
                 },
                 "clusterValues": {
@@ -39,6 +39,9 @@
                     }
                 },
                 "forceUpgrade": {
+                    "type": "boolean"
+                },
+                "inCluster": {
                     "type": "boolean"
                 },
                 "namespace": {
