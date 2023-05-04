@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Set `ciliumNetworkPolicy.enabled=true` for `cert-manager-app`.
 - Bump `observability-bundle` to `0.4.2`.
 
 ## [0.9.0] - 2023-04-13

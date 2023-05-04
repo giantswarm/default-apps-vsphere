@@ -3,6 +3,10 @@ organization: ""
 managementCluster: ""
 
 userConfig:
+  certManager:
+    values: |
+      ciliumNetworkPolicy:
+        enabled: true
   netExporter:
     configMap:
       values: |
