@@ -105,10 +105,13 @@
         "userConfig": {
             "type": "object",
             "properties": {
+                "certExporter": {
+                    "$ref": "#/definitions/userConfig"
+                },
                 "certManager": {
                     "$ref": "#/definitions/userConfig"
                 },
-                "certExporter": {
+                "metricsServer": {
                     "$ref": "#/definitions/userConfig"
                 },
                 "netExporter": {
@@ -116,7 +119,10 @@
                 },
                 "nodeExporter": {
                     "$ref": "#/definitions/userConfig"
-                }
+                },
+                "vpa": {
+                    "$ref": "#/definitions/userConfig"
+                ,
             }
         }
     }

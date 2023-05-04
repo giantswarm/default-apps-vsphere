@@ -3,17 +3,26 @@ organization: ""
 managementCluster: ""
 
 userConfig:
-  certManager:
-    values: |
-      ciliumNetworkPolicy:
-        enabled: true
   certExporter:
-    values: |
-      ciliumNetworkPolicy:
-        enabled: true
+    configMap:
+      values: |
+        ciliumNetworkPolicy:
+          enabled: true
+  certManager:
+    configMap:
+      values: |
+        ciliumNetworkPolicy:
+          enabled: true
+  metricsServer:
+    configMap:
+      values: |
+        ciliumNetworkPolicy:
+          enabled: true
   netExporter:
     configMap:
       values: |
+        ciliumNetworkPolicy:
+          enabled: true
         dns:
           service: kube-dns
   nodeExporter:
@@ -21,6 +30,11 @@ userConfig:
       values: |
         disableConntrackCollector: true
         disableNvmeCollector: true
+  vpa:
+    configMap:
+      values: |
+        ciliumNetworkPolicy:
+          enabled: true
 
 apps:
   certExporter:
