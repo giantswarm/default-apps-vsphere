@@ -10,7 +10,7 @@
                 "catalog": {
                     "type": "string"
                 },
-                "chartName": {
+                "borked___chartName": {
                     "type": "string"
                 },
                 "clusterValues": {
