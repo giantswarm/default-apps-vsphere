@@ -1,7 +1,59 @@
 {
     "$schema": "http://json-schema.org/schema#",
     "definitions": {
+        "app": {
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+                "appName": {
+                    "type": "string"
+                },
+                "catalog": {
+                    "type": "string"
+                },
+                "chartName": {
+                    "type": "string"
+                },
+                "clusterValues": {
+                    "type": "object",
+                    "properties": {
+                        "configMap": {
+                            "type": "boolean"
+                        },
+                        "secret": {
+                            "type": "boolean"
+                        }
+                    }
+                },
+                "extraConfigs": {
+                    "type": "array",
+                    "items": {
+                        "properties": {
+                            "kind": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "forceUpgrade": {
+                    "type": "boolean"
+                },
+                "inCluster": {
+                    "type": "boolean"
+                },
+                "namespace": {
+                    "type": "string"
+                },
+                "version": {
+                    "type": "string"
+                }
+            }
+        },
         "userConfig": {
+            "additionalProperties": false,
             "type": "object",
             "properties": {
                 "configMap": {
@@ -15,230 +67,29 @@
             }
         }
     },
+    "additionalProperties": false,
     "type": "object",
     "properties": {
         "apps": {
             "type": "object",
             "properties": {
                 "certExporter": {
-                    "type": "object",
-                    "properties": {
-                        "appName": {
-                            "type": "string"
-                        },
-                        "catalog": {
-                            "type": "string"
-                        },
-                        "chartName": {
-                            "type": "string"
-                        },
-                        "clusterValues": {
-                            "type": "object",
-                            "properties": {
-                                "configMap": {
-                                    "type": "boolean"
-                                },
-                                "secret": {
-                                    "type": "boolean"
-                                }
-                            }
-                        },
-                        "extraConfigs": {
-                            "type": "array",
-                            "items": {
-                                "properties": {
-                                    "kind": {
-                                        "type": "string"
-                                    },
-                                    "name": {
-                                        "type": "string"
-                                    }
-                                }
-                            }
-                        },
-                        "forceUpgrade": {
-                            "type": "boolean"
-                        },
-                        "namespace": {
-                            "type": "string"
-                        },
-                        "version": {
-                            "type": "string"
-                        }
-                    }
+                    "$ref": "#/definitions/app"
                 },
                 "clusterResources": {
-                    "type": "object",
-                    "properties": {
-                        "appName": {
-                            "type": "string"
-                        },
-                        "catalog": {
-                            "type": "string"
-                        },
-                        "chartName": {
-                            "type": "string"
-                        },
-                        "clusterValues": {
-                            "type": "object",
-                            "properties": {
-                                "configMap": {
-                                    "type": "boolean"
-                                },
-                                "secret": {
-                                    "type": "boolean"
-                                }
-                            }
-                        },
-                        "forceUpgrade": {
-                            "type": "boolean"
-                        },
-                        "namespace": {
-                            "type": "string"
-                        },
-                        "version": {
-                            "type": "string"
-                        }
-                    }
+                    "$ref": "#/definitions/app"
                 },
                 "metricsServer": {
-                    "type": "object",
-                    "properties": {
-                        "appName": {
-                            "type": "string"
-                        },
-                        "catalog": {
-                            "type": "string"
-                        },
-                        "chartName": {
-                            "type": "string"
-                        },
-                        "clusterValues": {
-                            "type": "object",
-                            "properties": {
-                                "configMap": {
-                                    "type": "boolean"
-                                },
-                                "secret": {
-                                    "type": "boolean"
-                                }
-                            }
-                        },
-                        "forceUpgrade": {
-                            "type": "boolean"
-                        },
-                        "namespace": {
-                            "type": "string"
-                        },
-                        "version": {
-                            "type": "string"
-                        }
-                    }
+                    "$ref": "#/definitions/app"
                 },
                 "netExporter": {
-                    "type": "object",
-                    "properties": {
-                        "appName": {
-                            "type": "string"
-                        },
-                        "catalog": {
-                            "type": "string"
-                        },
-                        "chartName": {
-                            "type": "string"
-                        },
-                        "clusterValues": {
-                            "type": "object",
-                            "properties": {
-                                "configMap": {
-                                    "type": "boolean"
-                                },
-                                "secret": {
-                                    "type": "boolean"
-                                }
-                            }
-                        },
-                        "forceUpgrade": {
-                            "type": "boolean"
-                        },
-                        "namespace": {
-                            "type": "string"
-                        },
-                        "version": {
-                            "type": "string"
-                        }
-                    }
+                    "$ref": "#/definitions/app"
                 },
                 "nodeExporter": {
-                    "type": "object",
-                    "properties": {
-                        "appName": {
-                            "type": "string"
-                        },
-                        "catalog": {
-                            "type": "string"
-                        },
-                        "chartName": {
-                            "type": "string"
-                        },
-                        "clusterValues": {
-                            "type": "object",
-                            "properties": {
-                                "configMap": {
-                                    "type": "boolean"
-                                },
-                                "secret": {
-                                    "type": "boolean"
-                                }
-                            }
-                        },
-                        "forceUpgrade": {
-                            "type": "boolean"
-                        },
-                        "namespace": {
-                            "type": "string"
-                        },
-                        "version": {
-                            "type": "string"
-                        }
-                    }
+                    "$ref": "#/definitions/app"
                 },
                 "observabilityBundle": {
-                    "type": "object",
-                    "properties": {
-                        "appName": {
-                            "type": "string"
-                        },
-                        "catalog": {
-                            "type": "string"
-                        },
-                        "chartName": {
-                            "type": "string"
-                        },
-                        "clusterValues": {
-                            "type": "object",
-                            "properties": {
-                                "configMap": {
-                                    "type": "boolean"
-                                },
-                                "secret": {
-                                    "type": "boolean"
-                                }
-                            }
-                        },
-                        "forceUpgrade": {
-                            "type": "boolean"
-                        },
-                        "inCluster": {
-                            "type": "boolean"
-                        },
-                        "namespace": {
-                            "type": "string"
-                        },
-                        "version": {
-                            "type": "string"
-                        }
-                    }
+                    "$ref": "#/definitions/app"
                 }
             }
         },
@@ -270,4 +121,3 @@
         }
     }
 }
-
