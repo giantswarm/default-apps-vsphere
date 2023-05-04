@@ -7,6 +7,10 @@ userConfig:
     values: |
       ciliumNetworkPolicy:
         enabled: true
+  certExporter:
+    values: |
+      ciliumNetworkPolicy:
+        enabled: true
   netExporter:
     configMap:
       values: |

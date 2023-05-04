@@ -1,5 +1,20 @@
 {
     "$schema": "http://json-schema.org/schema#",
+    "definitions": {
+        "userConfig": {
+            "type": "object",
+            "properties": {
+                "configMap": {
+                    "type": "object",
+                    "properties": {
+                        "values": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        }
+    },
     "type": "object",
     "properties": {
         "apps": {
@@ -240,43 +255,16 @@
             "type": "object",
             "properties": {
                 "certManager": {
-                    "type": "object",
-                    "properties": {
-                        "configMap": {
-                            "type": "object",
-                            "properties": {
-                                "values": {
-                                    "type": "string"
-                                }
-                            }
-                        }
-                    }
+                    "$ref": "#/definitions/userConfig"
+                },
+                "certExporter": {
+                    "$ref": "#/definitions/userConfig"
                 },
                 "netExporter": {
-                    "type": "object",
-                    "properties": {
-                        "configMap": {
-                            "type": "object",
-                            "properties": {
-                                "values": {
-                                    "type": "string"
-                                }
-                            }
-                        }
-                    }
+                    "$ref": "#/definitions/userConfig"
                 },
                 "nodeExporter": {
-                    "type": "object",
-                    "properties": {
-                        "configMap": {
-                            "type": "object",
-                            "properties": {
-                                "values": {
-                                    "type": "string"
-                                }
-                            }
-                        }
-                    }
+                    "$ref": "#/definitions/userConfig"
                 }
             }
         }
