@@ -1,6 +1,6 @@
 {
-    "$schema": "http://json-schema.org/schema#",
-    "definitions": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$defs": {
         "app": {
             "additionalProperties": false,
             "type": "object",
@@ -74,22 +74,22 @@
             "type": "object",
             "properties": {
                 "certExporter": {
-                    "$ref": "#/definitions/app"
+                    "$ref": "#/$defs/app"
                 },
                 "clusterResources": {
-                    "$ref": "#/definitions/app"
+                    "$ref": "#/$defs/app"
                 },
                 "metricsServer": {
-                    "$ref": "#/definitions/app"
+                    "$ref": "#/$defs/app"
                 },
                 "netExporter": {
-                    "$ref": "#/definitions/app"
+                    "$ref": "#/$defs/app"
                 },
                 "nodeExporter": {
-                    "$ref": "#/definitions/app"
+                    "$ref": "#/$defs/app"
                 },
                 "observabilityBundle": {
-                    "$ref": "#/definitions/app"
+                    "$ref": "#/$defs/app"
                 }
             }
         },
@@ -106,10 +106,10 @@
             "type": "object",
             "properties": {
                 "netExporter": {
-                    "$ref": "#/definitions/userConfig"
+                    "$ref": "#/$defs/userConfig"
                 },
                 "nodeExporter": {
-                    "$ref": "#/definitions/userConfig"
+                    "$ref": "#/$defs/userConfig"
                 }
             }
         }
