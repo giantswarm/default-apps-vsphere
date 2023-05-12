@@ -106,13 +106,13 @@
             "type": "object",
             "properties": {
                 "certExporter": {
-                    "$ref": "#/$defa/userConfig"
+                    "$ref": "#/$defs/userConfig"
                 },
                 "certManager": {
-                    "$ref": "#/$defa/userConfig"
+                    "$ref": "#/$defs/userConfig"
                 },
                 "metricsServer": {
-                    "$ref": "#/$defa/userConfig"
+                    "$ref": "#/$defs/userConfig"
                 },
                 "netExporter": {
                     "$ref": "#/$defs/userConfig"
