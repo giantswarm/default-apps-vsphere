@@ -81,9 +81,6 @@
                 "metricsServer": {
                     "$ref": "#/$defs/app"
                 },
-                "netExporter": {
-                    "$ref": "#/$defs/app"
-                },
                 "nodeExporter": {
                     "$ref": "#/$defs/app"
                 },
