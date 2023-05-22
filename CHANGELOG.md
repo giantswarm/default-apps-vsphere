@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Add support for deploying on clusters where network traffic is completely blocked by default with cilium.
+- Update dependency giantswarm/observability-bundle to v0.6.0.
 
 ## [0.9.1] - 2023-05-22
 
