@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Bump `observability-bundle` to `0.4.2`.
 
+### Fixed
+
+- Fix cluster DNS service name for `net-exporter` (`kube-dns` -> `coredns`).
+
 ## [0.9.0] - 2023-04-13
 
 ### Changed
