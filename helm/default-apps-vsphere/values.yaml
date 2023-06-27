@@ -13,6 +13,14 @@ userConfig:
       values: |
         ciliumNetworkPolicy:
           enabled: true
+  etcdKubernetesResourceCountExporter:
+    configMap:
+      values: |
+        etcd:
+          hostPath: "/etc/kubernetes/pki/etcd/"
+          cacertpath: "/certs/ca.crt"
+          certpath: "/certs/server.crt"
+          keypath: "/certs/server.key"
   metricsServer:
     configMap:
       values: |
@@ -35,14 +43,6 @@ userConfig:
       values: |
         ciliumNetworkPolicy:
           enabled: true
-  etcdKubernetesResourceCountExporter:
-    configMap:
-      values: |
-        etcd:
-          hostPath: "/etc/kubernetes/pki/etcd/"
-          cacertpath: "/certs/ca.crt"
-          certpath: "/certs/server.crt"
-          keypath: "/certs/server.key"
 
 apps:
   certExporter:
@@ -69,6 +69,18 @@ apps:
     # used by renovate
     # repo: giantswarm/cert-manager-app
     version: 2.22.0
+  etcdKubernetesResourceCountExporter:
+    appName: etcd-kubernetes-resources-count-exporter
+    chartName: etcd-kubernetes-resources-count-exporter
+    catalog: default
+    clusterValues:
+      configMap: true
+      secret: false
+    forceUpgrade: false
+    namespace: kube-system
+    # used by renovate
+    # repo: giantswarm/etcd-kubernetes-resources-count-exporter
+    version: 1.3.0
   metricsServer:
     appName: metrics-server
     chartName: metrics-server-app
@@ -142,15 +154,3 @@ apps:
     # used by renovate
     # repo: giantswarm/vertical-pod-autoscaler-crd
     version: 2.0.1
-  etcdKubernetesResourceCountExporter:
-    appName: etcd-kubernetes-resources-count-exporter
-    chartName: etcd-kubernetes-resources-count-exporter
-    catalog: default
-    clusterValues:
-      configMap: true
-      secret: false
-    forceUpgrade: false
-    namespace: kube-system
-    # used by renovate
-    # repo: giantswarm/etcd-kubernetes-resources-count-exporter
-    version: 1.3.0
