@@ -21,6 +21,9 @@ userConfig:
           cacertpath: "/certs/ca.crt"
           certpath: "/certs/server.crt"
           keypath: "/certs/server.key"
+          prefix: "/registry/"
+        events:
+          prefix: "/registry/events/"
   metricsServer:
     configMap:
       values: |
