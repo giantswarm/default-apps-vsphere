@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Add `etcd-kubernetes-resources-count-exporter`.
 
+### Changed
+
+- Remove override of dns Service name (not required for coredns-app).
+
 ## [0.9.2] - 2023-05-22
 
 ### Changed
