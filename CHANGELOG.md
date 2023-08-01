@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.10.0] - 2023-08-01
+
 ### Added
 
 - Add `etcd-kubernetes-resources-count-exporter`.
@@ -125,7 +127,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initialise repo from template.
 - Add initial implementation without vSphere-specific apps.
 
-[Unreleased]: https://github.com/giantswarm/default-apps-vsphere/compare/v0.9.2...HEAD
+[Unreleased]: https://github.com/giantswarm/default-apps-vsphere/compare/v0.10.0...HEAD
+[0.10.0]: https://github.com/giantswarm/default-apps-vsphere/compare/v0.9.2...v0.10.0
 [0.9.2]: https://github.com/giantswarm/default-apps-vsphere/compare/v0.9.1...v0.9.2
 [0.9.1]: https://github.com/giantswarm/default-apps-vsphere/compare/v0.9.0...v0.9.1
 [0.9.0]: https://github.com/giantswarm/default-apps-vsphere/compare/v0.8.0...v0.9.0
