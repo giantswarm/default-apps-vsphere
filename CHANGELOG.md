@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.10.1] - 2023-08-03
 
+### Changed
+
+- Bump `cert-manager-app` to `3.1.0`.
+
 ## [0.10.0] - 2023-08-03
 
 ### Added
@@ -18,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Remove override of dns Service name (not required for coredns-app).
+- Bump `cert-manager-app` to `2.24.1`.
 
 ## [0.9.2] - 2023-05-22
 
