@@ -13,6 +13,11 @@ userConfig:
       values: |
         ciliumNetworkPolicy:
           enabled: true
+        ingressShim:
+          defaultIssuerName: letsencrypt-giantswarm
+          defaultIssuerKind: ClusterIssuer
+          defaultIssuerGroup: cert-manager.io
+        enableServiceLinks: true
   etcdKubernetesResourceCountExporter:
     configMap:
       values: |
