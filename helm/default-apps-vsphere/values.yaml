@@ -13,7 +13,6 @@ userConfig:
       values: |
         ciliumNetworkPolicy:
           enabled: true
-        # cert-manager-app v3.x.x
         ingressShim:
           defaultIssuerName: letsencrypt-giantswarm
           defaultIssuerKind: ClusterIssuer
