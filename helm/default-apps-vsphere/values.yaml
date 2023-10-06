@@ -29,6 +29,16 @@ userConfig:
           prefix: "/registry/"
         events:
           prefix: "/registry/events/"
+  kyverno:
+    configMap:
+      values: |
+        ciliumNetworkPolicy:
+          enabled: true
+        psp:
+          enabled: false
+        policy-reporter:
+          psp:
+            enabled: false
   metricsServer:
     configMap:
       values: |
@@ -90,6 +100,18 @@ apps:
     # used by renovate
     # repo: giantswarm/etcd-kubernetes-resources-count-exporter
     version: 1.6.0
+  kyverno:
+    appName: kyverno
+    chartName: kyverno-app
+    catalog: default
+    clusterValues:
+      configMap: true
+      secret: false
+    forceUpgrade: true
+    namespace: kyverno
+    # used by renovate
+    # repo: giantswarm/kyverno-app
+    version: 0.15.2
   metricsServer:
     appName: metrics-server
     chartName: metrics-server-app
