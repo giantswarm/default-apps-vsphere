@@ -82,7 +82,6 @@ apps:
     appName: chart-operator-extensions
     chartName: chart-operator-extensions
     catalog: default
-    enabled: true
     clusterValues:
       configMap: false
       secret: false
