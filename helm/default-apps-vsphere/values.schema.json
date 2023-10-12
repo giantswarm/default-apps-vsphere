@@ -25,6 +25,9 @@
                         }
                     }
                 },
+                "dependsOn": {
+                    "type": "string"
+                },
                 "extraConfigs": {
                     "type": "array",
                     "items": {
