@@ -146,6 +146,7 @@ apps:
     clusterValues:
       configMap: true
       secret: false
+    dependsOn: vertical-pod-autoscaler-crd
     forceUpgrade: false
     namespace: kube-system
     # used by renovate
