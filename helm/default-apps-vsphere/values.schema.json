@@ -78,6 +78,9 @@
                 "certExporter": {
                     "$ref": "#/$defs/app"
                 },
+                "chartOperatorExtensions": {
+                    "$ref": "#/$defs/app"
+                },
                 "clusterResources": {
                     "$ref": "#/$defs/app"
                 },
