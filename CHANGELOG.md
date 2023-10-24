@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Bump `cert-exporter` to `v2.8.0`.
 - Bump `cert-manager-app` to `v3.5.0`.
 
 ## [0.11.1] - 2023-09-21
