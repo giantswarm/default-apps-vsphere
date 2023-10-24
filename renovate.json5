@@ -1,3 +1,4 @@
+// Do not edit this config directly. It is generated from https://github.com/giantswarm/github/blob/main/repositories/override/default-apps-vsphere/renovate.json5
 {
   "extends": [
     "config:base"
@@ -13,6 +14,7 @@
     "zricethezav/gitleaks-action",
     "actions/setup-go"
   ],
+  "prFooter": "/run cluster-test-suites",
   "regexManagers": [
     {
       "fileMatch": ["^helm\\/.+\\/values\\.yaml$"],
@@ -21,5 +23,6 @@
       "extractVersionTemplate": "^v(?<version>.*)$"
     }
   ],
-  "schedule": [ "after 6am on thursday" ]
+  // this can trigger the CI (mc-bootstrap ci runs at 2am and 2pm)
+  "schedule": [ "before 3am", "after 3pm" ]
 }
