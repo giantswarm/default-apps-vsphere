@@ -1,28 +1,8 @@
-// Do not edit this config directly. It is generated from https://github.com/giantswarm/github/blob/main/repositories/override/default-apps-vsphere/renovate.json5
 {
   "extends": [
-    "config:base"
-  ],
-  "labels": ["dependencies"],
-  "dependencyDashboard": true,
-  "ignorePaths": [
-    ".github/workflows/zz_generated.*",
-    ".github/workflows/codeql-analysis.yml"
-  ],
-  "ignoreDeps": [
-    "architect",
-    "zricethezav/gitleaks-action",
-    "actions/setup-go"
+    "github>giantswarm/renovate-presets:default.json5"
   ],
   "prFooter": "/run cluster-test-suites",
-  "regexManagers": [
-    {
-      "fileMatch": ["^helm\\/.+\\/values\\.yaml$"],
-      "matchStrings": ["repo: (?<depName>.*)\n(\\s)*version: (?<currentValue>.*?)\n"],
-      "datasourceTemplate": "github-releases",
-      "extractVersionTemplate": "^v(?<version>.*)$"
-    }
-  ],
   // this can trigger the CI (mc-bootstrap ci runs at 2am and 2pm)
   "schedule": [ "before 3am", "after 3pm" ]
 }
