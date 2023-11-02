@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.11.2] - 2023-11-02
+
 ### Added
 
 - Added `chart-operator-extension` version `v1.1.1` that contains e.g. `ServiceMonitors` for `chart-operator`.
@@ -164,7 +166,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initialise repo from template.
 - Add initial implementation without vSphere-specific apps.
 
-[Unreleased]: https://github.com/giantswarm/default-apps-vsphere/compare/v0.11.1...HEAD
+[Unreleased]: https://github.com/giantswarm/default-apps-vsphere/compare/v0.11.2...HEAD
+[0.11.2]: https://github.com/giantswarm/default-apps-vsphere/compare/v0.11.1...v0.11.2
 [0.11.1]: https://github.com/giantswarm/default-apps-vsphere/compare/v0.11.0...v0.11.1
 [0.11.0]: https://github.com/giantswarm/default-apps-vsphere/compare/v0.10.2...v0.11.0
 [0.10.2]: https://github.com/giantswarm/default-apps-vsphere/compare/v0.10.1...v0.10.2
