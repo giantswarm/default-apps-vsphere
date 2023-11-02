@@ -14,8 +14,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Bump `cert-exporter` to `v2.8.0`.
-- Bump `cert-manager-app` to `v3.5.0`.
+- Bump `cert-exporter` from `2.6.0` to `2.8.2`.
+- Bump `cert-manager-app` from `3.3.0` to `3.5.0`.
+- Bump `etcd-kubernetes-resources-count-exporter` from `1.4.0` to `1.7.0`.
+- Bump `metrics-server-app` from `2.2.0` to `2.4.1`.
+- Bump `net-exporter` from `1.17.0` to `1.18.0`.
+- Bump `node-exporter-app` from `1.17.1` to `1.18.1`.
+- Bump `observability-bundle` from `0.7.5` to `0.8.9`.
+- Bump `vertical-pod-autoscaler-app` from `4.0.0` to `4.2.0`.
 
 ## [0.11.1] - 2023-09-21
 
