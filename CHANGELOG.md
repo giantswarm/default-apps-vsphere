@@ -13,11 +13,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Added `chart-operator-extension` version `v1.1.1` that contains e.g. `ServiceMonitors` for `chart-operator`.
 - Add dependency between `vertical-pod-autoscaler-crd` and `vertical-pod-autoscaler`.
-- Enable `ciliumNetworkPolicy` for `observabilityBundle`.
-
-### Removed
-
-- `unconfined` apparmor profile for `nodeExporter` app.
 
 ### Changed
 
