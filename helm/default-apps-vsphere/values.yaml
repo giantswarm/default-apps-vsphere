@@ -73,6 +73,7 @@ apps:
     clusterValues:
       configMap: true
       secret: true
+    dependsOn: prometheus-operator-crd
     forceUpgrade: true
     namespace: kube-system
     # used by renovate
