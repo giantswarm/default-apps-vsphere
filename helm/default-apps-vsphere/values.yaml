@@ -73,11 +73,12 @@ apps:
     clusterValues:
       configMap: true
       secret: true
+    dependsOn: prometheus-operator-crd
     forceUpgrade: true
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/cert-manager-app
-    version: 3.5.1
+    version: 3.5.2
   chartOperatorExtensions:
     appName: chart-operator-extensions
     chartName: chart-operator-extensions
