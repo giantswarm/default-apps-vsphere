@@ -63,7 +63,6 @@ apps:
     clusterValues:
       configMap: true
       secret: false
-    enabled: true
     forceUpgrade: true
     namespace: kube-system
     # used by renovate
@@ -76,7 +75,6 @@ apps:
     clusterValues:
       configMap: true
       secret: true
-    enabled: true
     dependsOn: prometheus-operator-crd
     forceUpgrade: true
     namespace: kube-system
@@ -90,7 +88,6 @@ apps:
     clusterValues:
       configMap: false
       secret: false
-    enabled: true
     dependsOn: prometheus-operator-crd
     namespace: giantswarm
     # used by renovate
@@ -103,7 +100,6 @@ apps:
     clusterValues:
       configMap: true
       secret: false
-    enabled: true
     forceUpgrade: false
     namespace: kube-system
     # used by renovate
@@ -116,7 +112,6 @@ apps:
     clusterValues:
       configMap: true
       secret: false
-    enabled: true
     forceUpgrade: true
     namespace: kube-system
     # used by renovate
@@ -129,7 +124,6 @@ apps:
     clusterValues:
       configMap: true
       secret: false
-    enabled: true
     forceUpgrade: true
     namespace: kube-system
     # used by renovate
@@ -142,7 +136,6 @@ apps:
     clusterValues:
       configMap: true
       secret: false
-    enabled: true
     forceUpgrade: true
     namespace: kube-system
     # used by renovate
@@ -155,7 +148,6 @@ apps:
     clusterValues:
       configMap: true
       secret: false
-    enabled: true
     forceUpgrade: false
     inCluster: true
     namespace: kube-system
@@ -169,7 +161,6 @@ apps:
     clusterValues:
       configMap: true
       secret: false
-    enabled: true
     dependsOn: vertical-pod-autoscaler-crd
     forceUpgrade: false
     namespace: kube-system
@@ -183,7 +174,6 @@ apps:
     clusterValues:
       configMap: true
       secret: false
-    enabled: true
     forceUpgrade: false
     namespace: kube-system
     # used by renovate
@@ -196,7 +186,6 @@ apps:
     clusterValues:
       configMap: true
       secret: true
-    enabled: true
     forceUpgrade: true
     namespace: kube-system
     # used by renovate
