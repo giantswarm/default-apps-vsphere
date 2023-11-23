@@ -8,4 +8,4 @@ name: default-apps-vsphere
 restrictions:
   compatibleProviders:
     - vsphere
-version: 0.11.3
+version: 0.11.4

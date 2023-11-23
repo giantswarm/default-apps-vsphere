@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.11.4] - 2023-11-23
+
 ### Added
 
 - Add 'teleport-kube-agent-app`
@@ -177,7 +179,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initialise repo from template.
 - Add initial implementation without vSphere-specific apps.
 
-[Unreleased]: https://github.com/giantswarm/default-apps-vsphere/compare/v0.11.3...HEAD
+[Unreleased]: https://github.com/giantswarm/default-apps-vsphere/compare/v0.11.4...HEAD
+[0.11.4]: https://github.com/giantswarm/default-apps-vsphere/compare/v0.11.3...v0.11.4
 [0.11.3]: https://github.com/giantswarm/default-apps-vsphere/compare/v0.11.2...v0.11.3
 [0.11.2]: https://github.com/giantswarm/default-apps-vsphere/compare/v0.11.1...v0.11.2
 [0.11.1]: https://github.com/giantswarm/default-apps-vsphere/compare/v0.11.0...v0.11.1
