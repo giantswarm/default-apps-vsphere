@@ -90,6 +90,7 @@ apps:
     clusterValues:
       configMap: false
       secret: false
+    enabled: true
     dependsOn: prometheus-operator-crd
     namespace: giantswarm
     # used by renovate
