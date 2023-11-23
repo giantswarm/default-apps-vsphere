@@ -8,7 +8,47 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+
 - Add 'teleport-kube-agent-app`
+
+## [0.11.3] - 2023-11-20
+
+## [0.11.2] - 2023-11-02
+
+### Added
+
+- Added `chart-operator-extension` version `v1.1.1` that contains e.g. `ServiceMonitors` for `chart-operator`.
+- Add dependency between `vertical-pod-autoscaler-crd` and `vertical-pod-autoscaler`.
+- Enable `ciliumNetworkPolicy` for `observabilityBundle`.
+
+### Removed
+
+- `unconfined` apparmor profile for `nodeExporter` app.
+
+### Changed
+
+- Bump `cert-exporter` from `2.6.0` to `2.8.2`.
+- Bump `cert-manager-app` from `3.3.0` to `3.5.0`.
+- Bump `etcd-kubernetes-resources-count-exporter` from `1.4.0` to `1.7.0`.
+- Bump `metrics-server-app` from `2.2.0` to `2.4.1`.
+- Bump `net-exporter` from `1.17.0` to `1.18.0`.
+- Bump `node-exporter-app` from `1.17.1` to `1.18.1`.
+- Bump `observability-bundle` from `0.7.5` to `0.8.9`.
+- Bump `vertical-pod-autoscaler-app` from `4.0.0` to `4.2.0`.
+
+## [0.11.1] - 2023-09-21
+
+### Added
+
+- `podAnnotations` for `node-exporter` app to be able to collect systemd-related metrics.
+
+## [0.11.0] - 2023-08-31
+
+## [0.10.2] - 2023-08-29
+
+### Fixed
+
+- Update `cert-manager` parameters for v3.
 
 ## [0.10.1] - 2023-08-03
 
@@ -137,7 +177,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initialise repo from template.
 - Add initial implementation without vSphere-specific apps.
 
-[Unreleased]: https://github.com/giantswarm/default-apps-vsphere/compare/v0.10.1...HEAD
+[Unreleased]: https://github.com/giantswarm/default-apps-vsphere/compare/v0.11.3...HEAD
+[0.11.3]: https://github.com/giantswarm/default-apps-vsphere/compare/v0.11.2...v0.11.3
+[0.11.2]: https://github.com/giantswarm/default-apps-vsphere/compare/v0.11.1...v0.11.2
+[0.11.1]: https://github.com/giantswarm/default-apps-vsphere/compare/v0.11.0...v0.11.1
+[0.11.0]: https://github.com/giantswarm/default-apps-vsphere/compare/v0.10.2...v0.11.0
+[0.10.2]: https://github.com/giantswarm/default-apps-vsphere/compare/v0.10.1...v0.10.2
 [0.10.1]: https://github.com/giantswarm/default-apps-vsphere/compare/v0.10.0...v0.10.1
 [0.10.0]: https://github.com/giantswarm/default-apps-vsphere/compare/v0.9.2...v0.10.0
 [0.9.2]: https://github.com/giantswarm/default-apps-vsphere/compare/v0.9.1...v0.9.2

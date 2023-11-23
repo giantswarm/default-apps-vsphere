@@ -25,6 +25,9 @@
                         }
                     }
                 },
+                "dependsOn": {
+                    "type": "string"
+                },
                 "extraConfigs": {
                     "type": "array",
                     "items": {
@@ -76,6 +79,9 @@
             "type": "object",
             "properties": {
                 "certExporter": {
+                    "$ref": "#/$defs/app"
+                },
+                "chartOperatorExtensions": {
                     "$ref": "#/$defs/app"
                 },
                 "clusterResources": {

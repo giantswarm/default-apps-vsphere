@@ -1,0 +1,8 @@
+{
+  "extends": [
+    "github>giantswarm/renovate-presets:default.json5"
+  ],
+  "prFooter": "/run cluster-test-suites",
+  // this can trigger the CI (mc-bootstrap ci runs at 2am and 2pm)
+  "schedule": [ "before 3am", "after 3pm" ]
+}
