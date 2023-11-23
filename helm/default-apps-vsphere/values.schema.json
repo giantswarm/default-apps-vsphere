@@ -41,9 +41,6 @@
                         }
                     }
                 },
-                "enabled": {
-                    "type": "boolean"
-                },                
                 "forceUpgrade": {
                     "type": "boolean"
                 },
