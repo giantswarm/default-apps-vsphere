@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Add 'teleport-kube-agent-app`
 
+### Fixed
+
+- Shortened `etcd-kubernetes-resources-count-exporter` appName to `etcd-k8s-res-count-exporter`.
+
 ## [0.11.3] - 2023-11-20
 
 ## [0.11.2] - 2023-11-02
