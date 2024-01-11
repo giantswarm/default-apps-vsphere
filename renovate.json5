@@ -4,5 +4,9 @@
   ],
   "prFooter": "/run cluster-test-suites",
   // this can trigger the CI (mc-bootstrap ci runs at 2am and 2pm)
-  "schedule": [ "before 3am", "after 3pm" ]
+  "schedule": [ "before 3am", "after 3pm" ],
+  "prBodyNotes": [
+    "Trigger E2E tests:",
+    "/run cluster-test-suites"
+  ]
 }
