@@ -5,12 +5,12 @@ managementCluster: ""
 userConfig:
   certExporter:
     configMap:
-      values: |
+      values:
         ciliumNetworkPolicy:
           enabled: true
   certManager:
     configMap:
-      values: |
+      values:
         ciliumNetworkPolicy:
           enabled: true
         ingressShim:
@@ -20,7 +20,7 @@ userConfig:
         enableServiceLinks: true
   etcdKubernetesResourceCountExporter:
     configMap:
-      values: |
+      values:
         etcd:
           hostPath: "/etc/kubernetes/pki/etcd/"
           cacertpath: "/certs/ca.crt"
@@ -31,22 +31,22 @@ userConfig:
           prefix: "/registry/events/"
   metricsServer:
     configMap:
-      values: |
+      values:
         ciliumNetworkPolicy:
           enabled: true
   netExporter:
     configMap:
-      values: |
+      values:
         ciliumNetworkPolicy:
           enabled: true
   nodeExporter:
     configMap:
-      values: |
+      values:
         disableConntrackCollector: true
         disableNvmeCollector: true
   observabilityBundle:
     configMap:
-      values: |
+      values:
         userConfig:
           kubePrometheusStack:
             configMap:
@@ -78,7 +78,7 @@ userConfig:
                     pspEnabled: true
   vpa:
     configMap:
-      values: |
+      values:
         ciliumNetworkPolicy:
           enabled: true
 
