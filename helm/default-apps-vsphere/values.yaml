@@ -197,4 +197,3 @@ apps:
     extraConfigs:
       - kind: configMap
         name: "{{ $.Values.clusterName }}-teleport-kube-agent-config"
-        namespace: "{{ $.Release.Namespace }}"
