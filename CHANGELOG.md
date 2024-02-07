@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Bump `observability-bundle` to `1.2.1`.
 - Use a YAML object for the apps configuration, so that defaults are not overwritten when users pass custom values.
 
 ## [0.12.0] - 2023-12-04
