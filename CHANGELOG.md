@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.12.1] - 2024-02-12
+
 ### Added
 
 - Include support for schemadocs to generate Chart README file
@@ -193,7 +195,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initialise repo from template.
 - Add initial implementation without vSphere-specific apps.
 
-[Unreleased]: https://github.com/giantswarm/default-apps-vsphere/compare/v0.12.0...HEAD
+[Unreleased]: https://github.com/giantswarm/default-apps-vsphere/compare/v0.12.1...HEAD
+[0.12.1]: https://github.com/giantswarm/default-apps-vsphere/compare/v0.12.0...v0.12.1
 [0.12.0]: https://github.com/giantswarm/default-apps-vsphere/compare/v0.11.3...v0.12.0
 [0.11.3]: https://github.com/giantswarm/default-apps-vsphere/compare/v0.11.2...v0.11.3
 [0.11.2]: https://github.com/giantswarm/default-apps-vsphere/compare/v0.11.1...v0.11.2
