@@ -81,6 +81,9 @@
                 "chartOperatorExtensions": {
                     "$ref": "#/$defs/app"
                 },
+                "ciliumServiceMonitors": {
+                    "$ref": "#/$defs/app"
+                },
                 "clusterResources": {
                     "$ref": "#/$defs/app"
                 },
