@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Add `cilium-servicemonitors` app.
+- Add `capi-node-labeler` app.
 
 ## [0.13.0] - 2024-02-27
 
