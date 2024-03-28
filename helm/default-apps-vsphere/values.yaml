@@ -124,7 +124,7 @@ apps:
     # used by renovate
     # repo: giantswarm/etcd-kubernetes-resources-count-exporter
     version: 1.9.0
-  k8sDnsNodeCacheApp:
+  k8sDnsNodeCache:
     appName: k8s-dns-node-cache
     chartName: k8s-dns-node-cache-app
     catalog: default
