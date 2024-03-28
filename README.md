@@ -1,5 +1,7 @@
 [![CircleCI](https://circleci.com/gh/giantswarm/default-apps-vsphere.svg?style=shield)](https://circleci.com/gh/giantswarm/default-apps-vsphere)
 
+test
+
 # default-apps-vsphere chart
 
 Giant Swarm offers a default-apps-vsphere App which can be installed in workload clusters.
