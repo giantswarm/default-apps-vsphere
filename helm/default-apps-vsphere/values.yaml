@@ -131,7 +131,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/k8s-dns-node-cache-app
-    version: 2.7.0
+    version: 2.8.1
   metricsServer:
     appName: metrics-server
     chartName: metrics-server-app
@@ -155,7 +155,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/net-exporter
-    version: 1.20.0
+    version: 1.21.0
   nodeExporter:
     appName: node-exporter
     chartName: node-exporter-app
