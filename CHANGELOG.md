@@ -9,8 +9,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Update
-
 - Update `net-exporter` to v1.21.0.
 - Update `k8s-dns-node-cache-app` to v2.8.1.
 - Update `teleport-kube-agent-app` to v0.9.1.
