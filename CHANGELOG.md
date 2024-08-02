@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Add `observability-policies` app.
+
 ### Changed
 
 - Update `net-exporter` to v1.21.0.
