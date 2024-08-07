@@ -2,6 +2,9 @@ clusterName: ""
 organization: ""
 managementCluster: ""
 
+deleteOptions:
+  moveAppsHelmOwnershipToClusterVSphere: false
+
 userConfig:
   certExporter:
     configMap:

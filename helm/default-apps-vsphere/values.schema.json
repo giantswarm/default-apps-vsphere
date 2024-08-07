@@ -110,6 +110,18 @@
         "clusterName": {
             "type": "string"
         },
+        "deleteOptions": {
+            "type": "object",
+            "title": "Delete options",
+            "properties": {
+                "moveAppsHelmOwnershipToClusterVSphere": {
+                    "type": "boolean",
+                    "title": "Move Apps Helm ownership to cluster-vsphere",
+                    "description": "Don't delete Apps' Helm charts in the workload cluster. After the update, cluster-vsphere will recreate App CRs and new App CRs will take over the reconciliation of the existing Chart CRs in the workload cluster.",
+                    "default": false
+                }
+            }
+        },
         "managementCluster": {
             "type": "string"
         },
