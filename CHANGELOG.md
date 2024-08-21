@@ -8,7 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 > [!WARNING]
-> This release includes changes that enable the unification of cluster-vsphere and default-apps-vsphere. Workload cluster upgrade requires manual steps. See details below.
+> This release includes changes that enable the unification of cluster-vsphere and default-apps-vsphere. The unification
+> of cluster-vsphere and default-apps-vsphere does not happen automatically, it must be enabled explicitly and even then
+> it requires manual steps. See details below.
 
 ### Added
 
