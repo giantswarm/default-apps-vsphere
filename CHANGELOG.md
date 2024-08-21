@@ -76,7 +76,9 @@ kubectl delete -n giantswarm chart vertical-pod-autoscaler-crd
 The command line will probably hang, as the chart-operator finalizer has is not getting removed (vertical-pod-autoscaler-crd
 Chart CR has been paused). Proceed to the next step to remove the finalizer and unblock the deletion.
 
-3. Remove chart-operator finalizer from the vertical-pod-autoscaler-crd Chart CR
+3. Remove finalizers from the vertical-pod-autoscaler-crd Chart CR
+
+Open another terminal window and run the following command to remove the vertical-pod-autoscaler-crd Chart CR finalizers:
 
 ```shell
 kubectl patch chart vertical-pod-autoscaler-crd -n giantswarm --type=json -p='[{"op": "remove", "path": "/metadata/finalizers"}]'
