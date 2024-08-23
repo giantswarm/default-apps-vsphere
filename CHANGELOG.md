@@ -7,9 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+> [!WARNING]
+> This release includes changes that enable the unification of cluster-vsphere and default-apps-vsphere. The unification
+> of cluster-vsphere and default-apps-vsphere does not happen automatically, it must be enabled explicitly and even then
+> it requires manual steps. See details below.
+
 ### Added
 
 - Add `observability-policies` app.
+- New Helm value `.Values.deleteOptions.moveAppsHelmOwnershipToClusterVSphere`, which, when enabled, will pause all apps in the default-apps-vsphere, and it will enable the below hooks. The apps are paused in order to prevent the deletion of Chart resources in the WC.
+- Helm hook to remove app-operator finalizer from App CRs, so that App CRs are deleted from the MC, while Chart CRs stay on the WC.
+- Helm hook to propagate pause annotation to all bundled apps.
 
 ### Changed
 
@@ -22,6 +30,63 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update `observability-bundle` to v1.5.1.
 - Update `security-bundle` to v1.8.0.
 - Update `vertical-pod-autoscaler-app` to v5.2.4.
+
+### ⚠️ Workload cluster upgrade with manual steps
+
+The steps to upgrade a workload cluster, with unifying cluster-vsphere and default-apps-vsphere, are the following:
+- Upgrade default-apps-vsphere App to the latest release that includes this change.
+- Update default-apps-vsphere Helm value `.Values.deleteOptions.moveAppsHelmOwnershipToClusterVSphere` to `true`.
+  - All App CRs, except observability-bundle and security-bundle, will get `app-operator.giantswarm.io/paused: true` annotation,
+    so wait few minutes for Helm post-upgrade hook to apply the change to all required App CRs.
+- Delete default-apps-vsphere CR.
+  - ⚠️ In case you are removing default-apps-vsphere App CR from your gitops repo which is using Flux, and depending on
+    how Flux is configured, default-apps-vsphere App CR may or may not get deleted from the management cluster. In case
+    Flux does not delete default-apps-vsphere App CR from the management cluster, make sure to delete it manually.
+  - App CRs (on the MC) for all default apps will get deleted. Wait few minutes for this to happen.
+  - Chart CRs on the workload cluster will remain untouched, so all apps will continue running.
+- Upgrade cluster-vsphere App CR to the latest (TBA release which includes [these changes](https://github.com/giantswarm/cluster-vsphere/pull/262)).
+  - cluster-vsphere will deploy all default apps, so wait a few minutes for all Apps to be successfully deployed.
+  - Chart resources on the workload cluster will get updated, as newly deployed App resources will take over the reconciliation
+    of the existing Chart resources.
+
+We're almost there, with just one more issue to fix manually.
+
+VPA CRD used to installed as an App resource from default-apps-vsphere, and now it's being installed as a HelmRelease from
+cluster-vsphere. Now, as a consequence of the above upgrade, we have the following situation:
+- default-apps-vsphere App has been deleted, but the vertical-pod-autoscaler-crd Chart CRs remained in the workload cluster.
+- cluster-vsphere has been upgraded, so now it also installs vertical-pod-autoscaler-crd HelmRelease.
+- outcome: we now have vertical-pod-autoscaler-crd HelmRelease in the MC and vertical-pod-autoscaler-crd Chart CR in the WC.
+
+Now we will remove the leftover vertical-pod-autoscaler-crd Chart CR in a safe way:
+
+1. Pause vertical-pod-autoscaler-crd Chart CR.
+
+Add annotation `chart-operator.giantswarm.io/paused: "true"` to vertical-pod-autoscaler-crd Chart CR in the workload cluster:
+
+```sh
+kubectl annotate -n giantswarm chart vertical-pod-autoscaler-crd chart-operator.giantswarm.io/paused="true" --overwrite
+```
+
+2. Delete vertical-pod-autoscaler-crd Chart CR in the workload cluster.
+
+```shell
+kubectl delete -n giantswarm chart vertical-pod-autoscaler-crd
+```
+
+The command line will probably hang, as the chart-operator finalizer has is not getting removed (vertical-pod-autoscaler-crd
+Chart CR has been paused). Proceed to the next step to remove the finalizer and unblock the deletion.
+
+3. Remove finalizers from the vertical-pod-autoscaler-crd Chart CR
+
+Open another terminal window and run the following command to remove the vertical-pod-autoscaler-crd Chart CR finalizers:
+
+```shell
+kubectl patch chart vertical-pod-autoscaler-crd -n giantswarm --type=json -p='[{"op": "remove", "path": "/metadata/finalizers"}]'
+```
+
+This will unblock the deletion and vertical-pod-autoscaler-crd will get removed, **without actually deleting VPA CustomResourceDefinition**.
+
+From now on, VPA CustomResourceDefinition will be maintained by the vertical-pod-autoscaler HelmRelease on the management cluster.
 
 ## [0.15.0] - 2024-07-08
 

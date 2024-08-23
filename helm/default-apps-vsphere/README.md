@@ -1,191 +1,167 @@
-# Values schema documentation
+# default-apps-vsphere
 
-This page lists all available configuration options, based on the [configuration values schema](values.schema.json).
+![Version: 0.15.0](https://img.shields.io/badge/Version-0.15.0-informational?style=flat-square)
 
-<!-- DOCS_START -->
+A Helm chart which defines the pre-installed apps in all Giant Swarm vSphere clusters
 
-### Apps
+**Homepage:** <https://github.com/giantswarm/default-apps-vsphere>
 
-Properties within the `.apps` top-level object
+## Values
 
-| **Property** | **Description** | **More Details** |
-| :----------- | :-------------- | :--------------- |
-| `apps.capi-node-labeler` |**None**|**Type:** `object`<br/>|
-| `apps.capi-node-labeler.appName` |**None**|**Type:** `string`<br/>|
-| `apps.capi-node-labeler.catalog` |**None**|**Type:** `string`<br/>|
-| `apps.capi-node-labeler.chartName` |**None**|**Type:** `string`<br/>|
-| `apps.capi-node-labeler.clusterValues` |**None**|**Type:** `object`<br/>|
-| `apps.capi-node-labeler.clusterValues.configMap` |**None**|**Type:** `boolean`<br/>|
-| `apps.capi-node-labeler.clusterValues.secret` |**None**|**Type:** `boolean`<br/>|
-| `apps.capi-node-labeler.dependsOn` |**None**|**Type:** `string`<br/>|
-| `apps.capi-node-labeler.extraConfigs` |**None**|**Type:** `array`<br/>|
-| `apps.capi-node-labeler.extraConfigs[*]` |**None**||
-| `apps.capi-node-labeler.extraConfigs[*].kind` |**None**|**Type:** `string`<br/>|
-| `apps.capi-node-labeler.extraConfigs[*].name` |**None**|**Type:** `string`<br/>|
-| `apps.capi-node-labeler.forceUpgrade` |**None**|**Type:** `boolean`<br/>|
-| `apps.capi-node-labeler.inCluster` |**None**|**Type:** `boolean`<br/>|
-| `apps.capi-node-labeler.namespace` |**None**|**Type:** `string`<br/>|
-| `apps.capi-node-labeler.version` |**None**|**Type:** `string`<br/>|
-| `apps.certExporter` |**None**|**Type:** `object`<br/>|
-| `apps.certExporter.appName` |**None**|**Type:** `string`<br/>|
-| `apps.certExporter.catalog` |**None**|**Type:** `string`<br/>|
-| `apps.certExporter.chartName` |**None**|**Type:** `string`<br/>|
-| `apps.certExporter.clusterValues` |**None**|**Type:** `object`<br/>|
-| `apps.certExporter.clusterValues.configMap` |**None**|**Type:** `boolean`<br/>|
-| `apps.certExporter.clusterValues.secret` |**None**|**Type:** `boolean`<br/>|
-| `apps.certExporter.dependsOn` |**None**|**Type:** `string`<br/>|
-| `apps.certExporter.extraConfigs` |**None**|**Type:** `array`<br/>|
-| `apps.certExporter.extraConfigs[*]` |**None**||
-| `apps.certExporter.extraConfigs[*].kind` |**None**|**Type:** `string`<br/>|
-| `apps.certExporter.extraConfigs[*].name` |**None**|**Type:** `string`<br/>|
-| `apps.certExporter.forceUpgrade` |**None**|**Type:** `boolean`<br/>|
-| `apps.certExporter.inCluster` |**None**|**Type:** `boolean`<br/>|
-| `apps.certExporter.namespace` |**None**|**Type:** `string`<br/>|
-| `apps.certExporter.version` |**None**|**Type:** `string`<br/>|
-| `apps.chartOperatorExtensions` |**None**|**Type:** `object`<br/>|
-| `apps.chartOperatorExtensions.appName` |**None**|**Type:** `string`<br/>|
-| `apps.chartOperatorExtensions.catalog` |**None**|**Type:** `string`<br/>|
-| `apps.chartOperatorExtensions.chartName` |**None**|**Type:** `string`<br/>|
-| `apps.chartOperatorExtensions.clusterValues` |**None**|**Type:** `object`<br/>|
-| `apps.chartOperatorExtensions.clusterValues.configMap` |**None**|**Type:** `boolean`<br/>|
-| `apps.chartOperatorExtensions.clusterValues.secret` |**None**|**Type:** `boolean`<br/>|
-| `apps.chartOperatorExtensions.dependsOn` |**None**|**Type:** `string`<br/>|
-| `apps.chartOperatorExtensions.extraConfigs` |**None**|**Type:** `array`<br/>|
-| `apps.chartOperatorExtensions.extraConfigs[*]` |**None**||
-| `apps.chartOperatorExtensions.extraConfigs[*].kind` |**None**|**Type:** `string`<br/>|
-| `apps.chartOperatorExtensions.extraConfigs[*].name` |**None**|**Type:** `string`<br/>|
-| `apps.chartOperatorExtensions.forceUpgrade` |**None**|**Type:** `boolean`<br/>|
-| `apps.chartOperatorExtensions.inCluster` |**None**|**Type:** `boolean`<br/>|
-| `apps.chartOperatorExtensions.namespace` |**None**|**Type:** `string`<br/>|
-| `apps.chartOperatorExtensions.version` |**None**|**Type:** `string`<br/>|
-| `apps.ciliumServiceMonitors` |**None**|**Type:** `object`<br/>|
-| `apps.ciliumServiceMonitors.appName` |**None**|**Type:** `string`<br/>|
-| `apps.ciliumServiceMonitors.catalog` |**None**|**Type:** `string`<br/>|
-| `apps.ciliumServiceMonitors.chartName` |**None**|**Type:** `string`<br/>|
-| `apps.ciliumServiceMonitors.clusterValues` |**None**|**Type:** `object`<br/>|
-| `apps.ciliumServiceMonitors.clusterValues.configMap` |**None**|**Type:** `boolean`<br/>|
-| `apps.ciliumServiceMonitors.clusterValues.secret` |**None**|**Type:** `boolean`<br/>|
-| `apps.ciliumServiceMonitors.dependsOn` |**None**|**Type:** `string`<br/>|
-| `apps.ciliumServiceMonitors.extraConfigs` |**None**|**Type:** `array`<br/>|
-| `apps.ciliumServiceMonitors.extraConfigs[*]` |**None**||
-| `apps.ciliumServiceMonitors.extraConfigs[*].kind` |**None**|**Type:** `string`<br/>|
-| `apps.ciliumServiceMonitors.extraConfigs[*].name` |**None**|**Type:** `string`<br/>|
-| `apps.ciliumServiceMonitors.forceUpgrade` |**None**|**Type:** `boolean`<br/>|
-| `apps.ciliumServiceMonitors.inCluster` |**None**|**Type:** `boolean`<br/>|
-| `apps.ciliumServiceMonitors.namespace` |**None**|**Type:** `string`<br/>|
-| `apps.ciliumServiceMonitors.version` |**None**|**Type:** `string`<br/>|
-| `apps.clusterResources` |**None**|**Type:** `object`<br/>|
-| `apps.clusterResources.appName` |**None**|**Type:** `string`<br/>|
-| `apps.clusterResources.catalog` |**None**|**Type:** `string`<br/>|
-| `apps.clusterResources.chartName` |**None**|**Type:** `string`<br/>|
-| `apps.clusterResources.clusterValues` |**None**|**Type:** `object`<br/>|
-| `apps.clusterResources.clusterValues.configMap` |**None**|**Type:** `boolean`<br/>|
-| `apps.clusterResources.clusterValues.secret` |**None**|**Type:** `boolean`<br/>|
-| `apps.clusterResources.dependsOn` |**None**|**Type:** `string`<br/>|
-| `apps.clusterResources.extraConfigs` |**None**|**Type:** `array`<br/>|
-| `apps.clusterResources.extraConfigs[*]` |**None**||
-| `apps.clusterResources.extraConfigs[*].kind` |**None**|**Type:** `string`<br/>|
-| `apps.clusterResources.extraConfigs[*].name` |**None**|**Type:** `string`<br/>|
-| `apps.clusterResources.forceUpgrade` |**None**|**Type:** `boolean`<br/>|
-| `apps.clusterResources.inCluster` |**None**|**Type:** `boolean`<br/>|
-| `apps.clusterResources.namespace` |**None**|**Type:** `string`<br/>|
-| `apps.clusterResources.version` |**None**|**Type:** `string`<br/>|
-| `apps.metricsServer` |**None**|**Type:** `object`<br/>|
-| `apps.metricsServer.appName` |**None**|**Type:** `string`<br/>|
-| `apps.metricsServer.catalog` |**None**|**Type:** `string`<br/>|
-| `apps.metricsServer.chartName` |**None**|**Type:** `string`<br/>|
-| `apps.metricsServer.clusterValues` |**None**|**Type:** `object`<br/>|
-| `apps.metricsServer.clusterValues.configMap` |**None**|**Type:** `boolean`<br/>|
-| `apps.metricsServer.clusterValues.secret` |**None**|**Type:** `boolean`<br/>|
-| `apps.metricsServer.dependsOn` |**None**|**Type:** `string`<br/>|
-| `apps.metricsServer.extraConfigs` |**None**|**Type:** `array`<br/>|
-| `apps.metricsServer.extraConfigs[*]` |**None**||
-| `apps.metricsServer.extraConfigs[*].kind` |**None**|**Type:** `string`<br/>|
-| `apps.metricsServer.extraConfigs[*].name` |**None**|**Type:** `string`<br/>|
-| `apps.metricsServer.forceUpgrade` |**None**|**Type:** `boolean`<br/>|
-| `apps.metricsServer.inCluster` |**None**|**Type:** `boolean`<br/>|
-| `apps.metricsServer.namespace` |**None**|**Type:** `string`<br/>|
-| `apps.metricsServer.version` |**None**|**Type:** `string`<br/>|
-| `apps.nodeExporter` |**None**|**Type:** `object`<br/>|
-| `apps.nodeExporter.appName` |**None**|**Type:** `string`<br/>|
-| `apps.nodeExporter.catalog` |**None**|**Type:** `string`<br/>|
-| `apps.nodeExporter.chartName` |**None**|**Type:** `string`<br/>|
-| `apps.nodeExporter.clusterValues` |**None**|**Type:** `object`<br/>|
-| `apps.nodeExporter.clusterValues.configMap` |**None**|**Type:** `boolean`<br/>|
-| `apps.nodeExporter.clusterValues.secret` |**None**|**Type:** `boolean`<br/>|
-| `apps.nodeExporter.dependsOn` |**None**|**Type:** `string`<br/>|
-| `apps.nodeExporter.extraConfigs` |**None**|**Type:** `array`<br/>|
-| `apps.nodeExporter.extraConfigs[*]` |**None**||
-| `apps.nodeExporter.extraConfigs[*].kind` |**None**|**Type:** `string`<br/>|
-| `apps.nodeExporter.extraConfigs[*].name` |**None**|**Type:** `string`<br/>|
-| `apps.nodeExporter.forceUpgrade` |**None**|**Type:** `boolean`<br/>|
-| `apps.nodeExporter.inCluster` |**None**|**Type:** `boolean`<br/>|
-| `apps.nodeExporter.namespace` |**None**|**Type:** `string`<br/>|
-| `apps.nodeExporter.version` |**None**|**Type:** `string`<br/>|
-| `apps.observabilityBundle` |**None**|**Type:** `object`<br/>|
-| `apps.observabilityBundle.appName` |**None**|**Type:** `string`<br/>|
-| `apps.observabilityBundle.catalog` |**None**|**Type:** `string`<br/>|
-| `apps.observabilityBundle.chartName` |**None**|**Type:** `string`<br/>|
-| `apps.observabilityBundle.clusterValues` |**None**|**Type:** `object`<br/>|
-| `apps.observabilityBundle.clusterValues.configMap` |**None**|**Type:** `boolean`<br/>|
-| `apps.observabilityBundle.clusterValues.secret` |**None**|**Type:** `boolean`<br/>|
-| `apps.observabilityBundle.dependsOn` |**None**|**Type:** `string`<br/>|
-| `apps.observabilityBundle.extraConfigs` |**None**|**Type:** `array`<br/>|
-| `apps.observabilityBundle.extraConfigs[*]` |**None**||
-| `apps.observabilityBundle.extraConfigs[*].kind` |**None**|**Type:** `string`<br/>|
-| `apps.observabilityBundle.extraConfigs[*].name` |**None**|**Type:** `string`<br/>|
-| `apps.observabilityBundle.forceUpgrade` |**None**|**Type:** `boolean`<br/>|
-| `apps.observabilityBundle.inCluster` |**None**|**Type:** `boolean`<br/>|
-| `apps.observabilityBundle.namespace` |**None**|**Type:** `string`<br/>|
-| `apps.observabilityBundle.version` |**None**|**Type:** `string`<br/>|
-| `apps.teleport-kube-agent` |**None**|**Type:** `object`<br/>|
-| `apps.teleport-kube-agent.appName` |**None**|**Type:** `string`<br/>|
-| `apps.teleport-kube-agent.catalog` |**None**|**Type:** `string`<br/>|
-| `apps.teleport-kube-agent.chartName` |**None**|**Type:** `string`<br/>|
-| `apps.teleport-kube-agent.clusterValues` |**None**|**Type:** `object`<br/>|
-| `apps.teleport-kube-agent.clusterValues.configMap` |**None**|**Type:** `boolean`<br/>|
-| `apps.teleport-kube-agent.clusterValues.secret` |**None**|**Type:** `boolean`<br/>|
-| `apps.teleport-kube-agent.dependsOn` |**None**|**Type:** `string`<br/>|
-| `apps.teleport-kube-agent.extraConfigs` |**None**|**Type:** `array`<br/>|
-| `apps.teleport-kube-agent.extraConfigs[*]` |**None**||
-| `apps.teleport-kube-agent.extraConfigs[*].kind` |**None**|**Type:** `string`<br/>|
-| `apps.teleport-kube-agent.extraConfigs[*].name` |**None**|**Type:** `string`<br/>|
-| `apps.teleport-kube-agent.forceUpgrade` |**None**|**Type:** `boolean`<br/>|
-| `apps.teleport-kube-agent.inCluster` |**None**|**Type:** `boolean`<br/>|
-| `apps.teleport-kube-agent.namespace` |**None**|**Type:** `string`<br/>|
-| `apps.teleport-kube-agent.version` |**None**|**Type:** `string`<br/>|
+| Key | Type | Default | Description |
+|-----|------|---------|-------------|
+| apps.capi-node-labeler.appName | string | `"capi-node-labeler"` |  |
+| apps.capi-node-labeler.catalog | string | `"default"` |  |
+| apps.capi-node-labeler.chartName | string | `"capi-node-labeler"` |  |
+| apps.capi-node-labeler.clusterValues.configMap | bool | `true` |  |
+| apps.capi-node-labeler.clusterValues.secret | bool | `false` |  |
+| apps.capi-node-labeler.forceUpgrade | bool | `false` |  |
+| apps.capi-node-labeler.namespace | string | `"kube-system"` |  |
+| apps.capi-node-labeler.version | string | `"0.5.0"` |  |
+| apps.certExporter.appName | string | `"cert-exporter"` |  |
+| apps.certExporter.catalog | string | `"default"` |  |
+| apps.certExporter.chartName | string | `"cert-exporter"` |  |
+| apps.certExporter.clusterValues.configMap | bool | `true` |  |
+| apps.certExporter.clusterValues.secret | bool | `false` |  |
+| apps.certExporter.forceUpgrade | bool | `true` |  |
+| apps.certExporter.namespace | string | `"kube-system"` |  |
+| apps.certExporter.version | string | `"2.9.1"` |  |
+| apps.certManager.appName | string | `"cert-manager"` |  |
+| apps.certManager.catalog | string | `"default"` |  |
+| apps.certManager.chartName | string | `"cert-manager-app"` |  |
+| apps.certManager.clusterValues.configMap | bool | `true` |  |
+| apps.certManager.clusterValues.secret | bool | `true` |  |
+| apps.certManager.dependsOn | string | `"prometheus-operator-crd"` |  |
+| apps.certManager.forceUpgrade | bool | `true` |  |
+| apps.certManager.namespace | string | `"kube-system"` |  |
+| apps.certManager.version | string | `"3.8.1"` |  |
+| apps.chartOperatorExtensions.appName | string | `"chart-operator-extensions"` |  |
+| apps.chartOperatorExtensions.catalog | string | `"default"` |  |
+| apps.chartOperatorExtensions.chartName | string | `"chart-operator-extensions"` |  |
+| apps.chartOperatorExtensions.clusterValues.configMap | bool | `false` |  |
+| apps.chartOperatorExtensions.clusterValues.secret | bool | `false` |  |
+| apps.chartOperatorExtensions.dependsOn | string | `"prometheus-operator-crd"` |  |
+| apps.chartOperatorExtensions.namespace | string | `"giantswarm"` |  |
+| apps.chartOperatorExtensions.version | string | `"1.1.2"` |  |
+| apps.ciliumServiceMonitors.appName | string | `"cilium-servicemonitors"` |  |
+| apps.ciliumServiceMonitors.catalog | string | `"default"` |  |
+| apps.ciliumServiceMonitors.chartName | string | `"cilium-servicemonitors"` |  |
+| apps.ciliumServiceMonitors.clusterValues.configMap | bool | `false` |  |
+| apps.ciliumServiceMonitors.clusterValues.secret | bool | `false` |  |
+| apps.ciliumServiceMonitors.dependsOn | string | `"prometheus-operator-crd"` |  |
+| apps.ciliumServiceMonitors.namespace | string | `"kube-system"` |  |
+| apps.ciliumServiceMonitors.version | string | `"0.1.2"` |  |
+| apps.etcdKubernetesResourceCountExporter.appName | string | `"etcd-k8s-res-count-exporter"` |  |
+| apps.etcdKubernetesResourceCountExporter.catalog | string | `"default"` |  |
+| apps.etcdKubernetesResourceCountExporter.chartName | string | `"etcd-kubernetes-resources-count-exporter"` |  |
+| apps.etcdKubernetesResourceCountExporter.clusterValues.configMap | bool | `true` |  |
+| apps.etcdKubernetesResourceCountExporter.clusterValues.secret | bool | `false` |  |
+| apps.etcdKubernetesResourceCountExporter.forceUpgrade | bool | `false` |  |
+| apps.etcdKubernetesResourceCountExporter.namespace | string | `"kube-system"` |  |
+| apps.etcdKubernetesResourceCountExporter.version | string | `"1.10.0"` |  |
+| apps.k8sDnsNodeCache.appName | string | `"k8s-dns-node-cache"` |  |
+| apps.k8sDnsNodeCache.catalog | string | `"default"` |  |
+| apps.k8sDnsNodeCache.chartName | string | `"k8s-dns-node-cache-app"` |  |
+| apps.k8sDnsNodeCache.namespace | string | `"kube-system"` |  |
+| apps.k8sDnsNodeCache.version | string | `"2.8.1"` |  |
+| apps.metricsServer.appName | string | `"metrics-server"` |  |
+| apps.metricsServer.catalog | string | `"default"` |  |
+| apps.metricsServer.chartName | string | `"metrics-server-app"` |  |
+| apps.metricsServer.clusterValues.configMap | bool | `true` |  |
+| apps.metricsServer.clusterValues.secret | bool | `false` |  |
+| apps.metricsServer.forceUpgrade | bool | `true` |  |
+| apps.metricsServer.namespace | string | `"kube-system"` |  |
+| apps.metricsServer.version | string | `"2.4.2"` |  |
+| apps.netExporter.appName | string | `"net-exporter"` |  |
+| apps.netExporter.catalog | string | `"default"` |  |
+| apps.netExporter.chartName | string | `"net-exporter"` |  |
+| apps.netExporter.clusterValues.configMap | bool | `true` |  |
+| apps.netExporter.clusterValues.secret | bool | `false` |  |
+| apps.netExporter.forceUpgrade | bool | `true` |  |
+| apps.netExporter.namespace | string | `"kube-system"` |  |
+| apps.netExporter.version | string | `"1.21.0"` |  |
+| apps.nodeExporter.appName | string | `"node-exporter"` |  |
+| apps.nodeExporter.catalog | string | `"default"` |  |
+| apps.nodeExporter.chartName | string | `"node-exporter-app"` |  |
+| apps.nodeExporter.clusterValues.configMap | bool | `true` |  |
+| apps.nodeExporter.clusterValues.secret | bool | `false` |  |
+| apps.nodeExporter.forceUpgrade | bool | `true` |  |
+| apps.nodeExporter.namespace | string | `"kube-system"` |  |
+| apps.nodeExporter.version | string | `"1.19.0"` |  |
+| apps.observabilityBundle.appName | string | `"observability-bundle"` |  |
+| apps.observabilityBundle.catalog | string | `"default"` |  |
+| apps.observabilityBundle.chartName | string | `"observability-bundle"` |  |
+| apps.observabilityBundle.clusterValues.configMap | bool | `true` |  |
+| apps.observabilityBundle.clusterValues.secret | bool | `false` |  |
+| apps.observabilityBundle.forceUpgrade | bool | `false` |  |
+| apps.observabilityBundle.inCluster | bool | `true` |  |
+| apps.observabilityBundle.namespace | string | `"kube-system"` |  |
+| apps.observabilityBundle.version | string | `"1.5.2"` |  |
+| apps.observabilityPolicies.appName | string | `"observability-policies"` |  |
+| apps.observabilityPolicies.catalog | string | `"default"` |  |
+| apps.observabilityPolicies.chartName | string | `"observability-policies"` |  |
+| apps.observabilityPolicies.clusterValues.configMap | bool | `false` |  |
+| apps.observabilityPolicies.clusterValues.secret | bool | `false` |  |
+| apps.observabilityPolicies.dependsOn | string | `"kyverno-crds"` |  |
+| apps.observabilityPolicies.namespace | string | `"kube-system"` |  |
+| apps.observabilityPolicies.version | string | `"0.0.1"` |  |
+| apps.securityBundle.appName | string | `"security-bundle"` |  |
+| apps.securityBundle.catalog | string | `"giantswarm"` |  |
+| apps.securityBundle.chartName | string | `"security-bundle"` |  |
+| apps.securityBundle.clusterValues.configMap | bool | `true` |  |
+| apps.securityBundle.clusterValues.secret | bool | `false` |  |
+| apps.securityBundle.forceUpgrade | bool | `false` |  |
+| apps.securityBundle.inCluster | bool | `true` |  |
+| apps.securityBundle.namespace | string | `"kube-system"` |  |
+| apps.securityBundle.version | string | `"1.8.0"` |  |
+| apps.teleport-kube-agent.appName | string | `"teleport-kube-agent"` |  |
+| apps.teleport-kube-agent.catalog | string | `"default"` |  |
+| apps.teleport-kube-agent.chartName | string | `"teleport-kube-agent"` |  |
+| apps.teleport-kube-agent.clusterValues.configMap | bool | `true` |  |
+| apps.teleport-kube-agent.clusterValues.secret | bool | `true` |  |
+| apps.teleport-kube-agent.extraConfigs[0].kind | string | `"configMap"` |  |
+| apps.teleport-kube-agent.extraConfigs[0].name | string | `"{{ $.Values.clusterName }}-teleport-kube-agent-config"` |  |
+| apps.teleport-kube-agent.extraConfigs[0].namespace | string | `"{{ $.Release.Namespace }}"` |  |
+| apps.teleport-kube-agent.forceUpgrade | bool | `true` |  |
+| apps.teleport-kube-agent.namespace | string | `"kube-system"` |  |
+| apps.teleport-kube-agent.version | string | `"0.9.2"` |  |
+| apps.vpa.appName | string | `"vertical-pod-autoscaler"` |  |
+| apps.vpa.catalog | string | `"default"` |  |
+| apps.vpa.chartName | string | `"vertical-pod-autoscaler-app"` |  |
+| apps.vpa.clusterValues.configMap | bool | `true` |  |
+| apps.vpa.clusterValues.secret | bool | `false` |  |
+| apps.vpa.dependsOn | string | `"vertical-pod-autoscaler-crd"` |  |
+| apps.vpa.forceUpgrade | bool | `false` |  |
+| apps.vpa.namespace | string | `"kube-system"` |  |
+| apps.vpa.version | string | `"5.2.4"` |  |
+| apps.vpaCRD.appName | string | `"vertical-pod-autoscaler-crd"` |  |
+| apps.vpaCRD.catalog | string | `"default"` |  |
+| apps.vpaCRD.chartName | string | `"vertical-pod-autoscaler-crd"` |  |
+| apps.vpaCRD.clusterValues.configMap | bool | `true` |  |
+| apps.vpaCRD.clusterValues.secret | bool | `false` |  |
+| apps.vpaCRD.forceUpgrade | bool | `false` |  |
+| apps.vpaCRD.namespace | string | `"kube-system"` |  |
+| apps.vpaCRD.version | string | `"3.1.0"` |  |
+| clusterName | string | `""` |  |
+| managementCluster | string | `""` |  |
+| organization | string | `""` |  |
+| userConfig.certExporter.configMap.values.ciliumNetworkPolicy.enabled | bool | `true` |  |
+| userConfig.certManager.configMap.values.ciliumNetworkPolicy.enabled | bool | `true` |  |
+| userConfig.certManager.configMap.values.enableServiceLinks | bool | `true` |  |
+| userConfig.certManager.configMap.values.ingressShim.defaultIssuerGroup | string | `"cert-manager.io"` |  |
+| userConfig.certManager.configMap.values.ingressShim.defaultIssuerKind | string | `"ClusterIssuer"` |  |
+| userConfig.certManager.configMap.values.ingressShim.defaultIssuerName | string | `"letsencrypt-giantswarm"` |  |
+| userConfig.etcdKubernetesResourceCountExporter.configMap.values.etcd.cacertpath | string | `"/certs/ca.crt"` |  |
+| userConfig.etcdKubernetesResourceCountExporter.configMap.values.etcd.certpath | string | `"/certs/server.crt"` |  |
+| userConfig.etcdKubernetesResourceCountExporter.configMap.values.etcd.hostPath | string | `"/etc/kubernetes/pki/etcd/"` |  |
+| userConfig.etcdKubernetesResourceCountExporter.configMap.values.etcd.keypath | string | `"/certs/server.key"` |  |
+| userConfig.etcdKubernetesResourceCountExporter.configMap.values.etcd.prefix | string | `"/registry/"` |  |
+| userConfig.etcdKubernetesResourceCountExporter.configMap.values.events.prefix | string | `"/registry/events/"` |  |
+| userConfig.metricsServer.configMap.values.ciliumNetworkPolicy.enabled | bool | `true` |  |
+| userConfig.netExporter.configMap.values.ciliumNetworkPolicy.enabled | bool | `true` |  |
+| userConfig.nodeExporter.configMap.values.disableConntrackCollector | bool | `true` |  |
+| userConfig.nodeExporter.configMap.values.disableNvmeCollector | bool | `true` |  |
+| userConfig.vpa.configMap.values.ciliumNetworkPolicy.enabled | bool | `true` |  |
 
-### User Config
-
-Properties within the `.userConfig` top-level object
-
-| **Property** | **Description** | **More Details** |
-| :----------- | :-------------- | :--------------- |
-| `userConfig.certExporter` |**None**|**Type:** `object`<br/>|
-| `userConfig.certExporter.configMap` |**None**|**Type:** `object`<br/>|
-| `userConfig.certExporter.configMap.values` |**None**|**Types:** `object, string`<br/>|
-| `userConfig.certManager` |**None**|**Type:** `object`<br/>|
-| `userConfig.certManager.configMap` |**None**|**Type:** `object`<br/>|
-| `userConfig.certManager.configMap.values` |**None**|**Types:** `object, string`<br/>|
-| `userConfig.metricsServer` |**None**|**Type:** `object`<br/>|
-| `userConfig.metricsServer.configMap` |**None**|**Type:** `object`<br/>|
-| `userConfig.metricsServer.configMap.values` |**None**|**Types:** `object, string`<br/>|
-| `userConfig.netExporter` |**None**|**Type:** `object`<br/>|
-| `userConfig.netExporter.configMap` |**None**|**Type:** `object`<br/>|
-| `userConfig.netExporter.configMap.values` |**None**|**Types:** `object, string`<br/>|
-| `userConfig.nodeExporter` |**None**|**Type:** `object`<br/>|
-| `userConfig.nodeExporter.configMap` |**None**|**Type:** `object`<br/>|
-| `userConfig.nodeExporter.configMap.values` |**None**|**Types:** `object, string`<br/>|
-| `userConfig.vpa` |**None**|**Type:** `object`<br/>|
-| `userConfig.vpa.configMap` |**None**|**Type:** `object`<br/>|
-| `userConfig.vpa.configMap.values` |**None**|**Types:** `object, string`<br/>|
-
-### Other
-
-| **Property** | **Description** | **More Details** |
-| :----------- | :-------------- | :--------------- |
-| `clusterName` |**None**|**Type:** `string`<br/>|
-| `managementCluster` |**None**|**Type:** `string`<br/>|
-| `organization` |**None**|**Type:** `string`<br/>|
-
-<!-- DOCS_END -->
+----------------------------------------------
+Autogenerated from chart metadata using [helm-docs v1.11.0](https://github.com/norwoodj/helm-docs/releases/v1.11.0)
