@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Disable Renovate app updates.
+
 ## [0.16.0] - 2024-08-23
 
 > [!WARNING]
